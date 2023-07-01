@@ -16,7 +16,6 @@ test('marshalPostageStamp', async () => {
             depth: 20
         } as unknown as PostageBatch,
         200,
-        200,
         Buffer.from('0000000000000000000000000000000000000000000000000000000000000000', 'hex'),
         Buffer.from('2222222222222222222222222222222222222222222222222222222222222222', 'hex')
     )
