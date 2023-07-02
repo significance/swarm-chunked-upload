@@ -17,7 +17,9 @@ test('marshalPostageStamp', async () => {
         } as unknown as PostageBatch,
         200,
         Buffer.from('0000000000000000000000000000000000000000000000000000000000000000', 'hex'),
-        Buffer.from('2222222222222222222222222222222222222222222222222222222222222222', 'hex')
+        Buffer.from('2222222222222222222222222222222222222222222222222222222222222222', 'hex'),
+        0,
+        0
     )
     expect(marshalled).toHaveLength(113) // todo
 })
