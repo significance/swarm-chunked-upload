@@ -6,8 +6,6 @@ interface Batch {
     batchID: string;
 }
 
-type Stamp = Buffer
-
 interface StampedChunk {
     address: string;
     payload: Buffer;
