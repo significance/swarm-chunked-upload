@@ -9,6 +9,7 @@ interface Batch {
 type Stamp = Buffer
 
 interface StampedChunk {
+    address: string;
     payload: Buffer;
     stamp: Stamp;
 }
@@ -34,7 +35,7 @@ export default async function chunkerStamper(payload: Buffer, batchID: string, p
                 chunkBucketIndex,
                 chunkBucket
             )
-            const stampedChunk = {payload: chunkPayload, stamp: chunkStamp}
+            const stampedChunk = {address: chunkAddressHex, payload: chunkPayload, stamp: chunkStamp}
             stampedChunks.push(stampedChunk)
         }
     }
