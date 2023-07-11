@@ -1,9 +1,6 @@
 import { PostageBatch } from '@ethersphere/bee-js'
 import { Wallet, keccak256, solidityPacked } from 'ethers'
 
-export const TEST_BATCH_ID = process.env.DUMMY_STAMP
-export const TEST_PRIVATE_KEY = process.env.DUMMY_PRIVATE_KEY
-
 export async function createSignature(
     address: Buffer,
     privateKey: Buffer,
