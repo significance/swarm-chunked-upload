@@ -1,6 +1,5 @@
 import { makeChunkedFile } from '@fairdatasociety/bmt-js'
 import { marshalPostageStamp, swarmAddressToBucketIndex } from './signature'
-import { type } from 'os'
 
 interface Batch {
     batchID: string;
@@ -9,7 +8,7 @@ interface Batch {
 interface StampedChunk {
     address: string;
     payload: Buffer;
-    stamp: Stamp;
+    stamp: Buffer;
 }
 
 export default async function chunkerStamper(payload: Buffer, batchID: string, privateKey: string, timeStamp: number) {
